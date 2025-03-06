@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+    {% block title %}
+    buy
+{% endblock %}
+
+{% block main %}
+    <form action="/buy" method="post">
+        <p> <input name="symbol" autocomplete="off" maxlength="30" placeholder="Symbol" autofocus></input> <br></p>
+        <p> <input name="shares" type="number" min="1" max="99" autocomplete="off" placeholder="Shares" oninput="validity.valid||(value='');"></input> <br> </p>
+        <p> <button type="submit" btn="primary-btn">Buy</button> </p>
+    </form>
+{% endblock %}

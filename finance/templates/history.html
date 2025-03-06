@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Wallet
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Symbol</th>
+            <th scope="col">Shares</th>
+            <th scope="col">Price</th>
+            <th scope="col">Total</th>
+            <th scope="col">Date</th>
+            <th scope="col">hour</th>
+          </tr>
+    </thead>
+    {% for dic in stocks %}
+        <tr>
+            <th scope="col"> {{dic.symbol | upper()}} </th>
+            <th scope="col"> {{dic.shares}} </th>
+            <th scope="col"> {{dic.price | round(2) | usd}} </th>
+            <th scope="col"> {{dic.total | round(2) | usd}} </th>
+            <th scope="col"> {{dic.date}} </th>
+            <th scope="col"> {{dic.hour}} </th>
+        <tr>
+    {% endfor %}
+</table>
+{% endblock %}

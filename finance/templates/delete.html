@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Delete Account
+{% endblock %}
+
+{% block main %}
+    <header>
+        Please introduce and confirm your password to delete your account
+    </header>
+    <form action="/delete" method="post">
+            <input type="text" name="password" maxlength="50" placeholder="Password" autocomplete="off"></input>
+        </p>
+        <p>
+            <input type="text" name="confirmation" maxlength="50" placeholder="confirm your password" autocomplete="off"></input>
+        </p>
+        <p>
+            <button type="submit" btn="primary-btn">Confirm</button>
+        </p>
+    </form>
+{% endblock %}
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded', function() {
+                let corrects = document.querySelectorAll('.correct');
+                for (let i = 0; i < corrects.length; i++){
+                    corrects[i].addEventListener('click', function(){
+                        resetButtons()
+                        corrects[i].parentElement.querySelector('.feedback').innerHTML = 'Correct';
+                        corrects[i].style.backgroundColor = 'Green';
+                    });
+                }
+                let incorrects = document.querySelectorAll('.incorrect');
+                for (let i = 0; i < incorrects.length; i++){
+                    incorrects[i].addEventListener('click', function(){
+                        resetButtons()
+                        incorrects[i].parentElement.querySelector('.feedback').innerHTML = 'Incorrect';
+                        incorrects[i].style.backgroundColor = 'Red';
+                    })
+                }
+                document.querySelector('#check').addEventListener('click', function(){
+                    let input = document.querySelector('input');
+                    if (input.value.toLowerCase() == 'harvard'){
+                        input.parentElement.querySelector('.feedback').innerHTML = 'Correct';
+                        input.style.backgroundColor = 'Green';
+                    }
+                    else{
+                        input.style.backgroundColor = 'Red';
+                        input.parentElement.querySelector('.feedback').innerHTML = 'Incorrect';
+                    }
+                })
+                //added this feature so
+                function resetButtons(){
+                    for (let i = 0; i < incorrects.length; i++){
+                        incorrects[i].parentElement.querySelector('.feedback').innerHTML = '';
+                        incorrects[i].style.backgroundColor = '';
+                    }
+                    for (let i = 0; i < corrects.length; i++){
+                        corrects[i].parentElement.querySelector('.feedback').innerHTML = '';
+                        corrects[i].style.backgroundColor = '';
+                    }
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3> Who is cs50's lectures teacher? </h3>
+                <button class = "correct">David</button>
+                <button class = "incorrect">Brayan</button>
+                <button class = "incorrect">john</button>
+                <button class = "incorrect">Gabriel</button>
+                <button class = "incorrect">Daniel</button>
+                <p class="feedback"></p>
+            </hr>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3> which university is cs50's course from? </h3>
+                <!-- added so it autoclears onclick -->
+                <input type="text" id="inputID" onclick="value=''">
+                <button id = "check">Check answer</button>
+                <p class = "feedback"></p>
+            </div>
+        </div>
+    </body>
+</html>
+
+<!---->

@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    register
+{% endblock %}
+
+{% block main %}
+    <form action="/register" method="post">
+        <p>
+            <input type="text" name="username" maxlength="50" placeholder="UserName" autocomplete="off"></input>
+        </p>
+        <p>
+            <input type="text" name="password" maxlength="50" placeholder="Password" autocomplete="off"></input>
+        </p>
+        <p>
+            <input type="text" name="confirmation" maxlength="50" placeholder="confirm your password" autocomplete="off"></input>
+        </p>
+        <p>
+            <button type="submit" btn="primary-btn">Register</button>
+        </p>
+    </form>
+{% endblock %}

@@ -1,0 +1,28 @@
+html used:
+<head> add links, scripts, etc
+<meta> adjust page dimensions
+<title> tab name
+<body> the page itslef
+<header> header of the page
+<main> most content from the page
+<p> new paragraph
+<br> line break
+<footer> bottom of the page (used to change pages in my page)
+<scripts> js code
+----------
+css used:
+font-size; change
+font-weight; makes the letters thicker
+text-align; move text possition
+margin-bottom; controls the gap between paragraphs
+padding-left; makes the page to move x pixels to the right
+----------
+boostrap used:
+background-color; changes background color
+---------
+js used:
+getters (id)
+setters (id)
+basic algorithms for the game
+
+i used more propities than the ones i mention here, but i didn't want to put all of them

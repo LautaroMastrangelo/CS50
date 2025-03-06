@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Wallet
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">symbol</th>
+            <th scope="col">shares</th>
+            <th scope="col">price</th>
+            <th scope="col">total</th>
+          </tr>
+    </thead>
+    {% for i in stocks %}
+        {% if i.finalShares > 0 %}
+        <tr>
+            <th> {{i.symbol | upper}} </th>
+            <th> {{i.finalShares}} </th>
+            <th> {{i.price | usd}} </th>
+            <th> {{i.finalTotal | usd}}</th>
+        <tr>
+        {% endif %}
+    {% endfor %}
+        <tr>
+            <td class="border-0 fw-bold text-end" colspan="3">Cash</td>
+            <td class="border-0 text-end">{{cash | usd}}</td>
+        </tr>
+        <tr>
+            <td class="border-0 fw-bold text-end" colspan="3">Total</td>
+            <td class="border-0 text-end">{{total | usd}}</td>
+        </tr>
+</table>
+{% endblock %}

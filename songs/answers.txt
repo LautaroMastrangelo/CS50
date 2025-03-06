@@ -1,0 +1,7 @@
+basing of the information in the data base, the best way to characterize the aura of a listener is by averaging
+the different information we have about the 100 songs, its tempo, speechiness, valece, etc
+
+but I'd say that the best way to charactize a listener is by looking into the genres and artist of he's favorite and
+most listened songs, so you can get an idea of which type of music he likes
+
+(i hope my answer satifies the question, im not sure if i understood the question properly to be honest)

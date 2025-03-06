@@ -1,0 +1,11 @@
+sort1 uses: Bubble sort
+
+How do you know?: it took the least amount of time to sort the sorted 50.000 array
+
+sort2 uses: Merge sort
+
+How do you know?: it took half the time sorting the random 50.000 than the other two
+
+sort3 uses: Selection sort
+
+How do you know?: it took longer than the sort1 on sorting the sorted 50.000 array
